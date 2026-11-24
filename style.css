@@ -1,0 +1,449 @@
+
+/* =========================================
+   TECHFEST 2027 - GLOBAL DESIGN SYSTEM
+   ========================================= */
+
+:root {
+    --bg-main: #080d1b;
+    --bg-card: #111a30;
+    --bg-card-hover: #172442;
+
+    --primary: #8b5cf6;
+    --secondary: #06b6d4;
+    --accent: #a78bfa;
+
+    --text-main: #f8fafc;
+    --text-muted: #a5b4cc;
+
+    --border: rgba(148, 163, 184, 0.2);
+
+    --gradient: linear-gradient(
+        135deg,
+        #7c3aed,
+        #2563eb,
+        #06b6d4
+    );
+}
+
+/* =========================================
+   RESET AND GENERAL STYLING
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    background: var(--gradient);
+    text-align: center;
+    padding: 55px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    color: #f0f9ff;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    padding: 18px;
+    background: #0d1528;
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    padding: 10px 18px;
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+    background: rgba(139, 92, 246, 0.2);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+main {
+    width: min(1100px, 92%);
+    margin: 45px auto;
+}
+
+section {
+    background: var(--bg-card);
+
+    padding: 30px;
+    margin-bottom: 28px;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+
+    transition: border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+section:hover {
+    border-color: rgba(139, 92, 246, 0.55);
+}
+
+section h2 {
+    color: var(--accent);
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+
+    border-left: 4px solid var(--primary);
+    padding-left: 14px;
+}
+
+section h3 {
+    color: #67e8f9;
+    margin: 20px 0 10px;
+}
+
+section p {
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+/* =========================================
+   IMAGES AND VIDEO
+   ========================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    display: block;
+    margin: 15px auto;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin: 20px auto;
+}
+
+/* =========================================
+   TABLES
+   ========================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    color: var(--text-main);
+}
+
+caption {
+    color: var(--accent);
+    font-size: 1.1rem;
+    padding: 15px;
+}
+
+th {
+    background: var(--gradient);
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 14px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+tbody tr {
+    background: #111a30;
+    transition: background 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+    background: #16213a;
+}
+
+tbody tr:hover {
+    background: #253456;
+}
+
+/* =========================================
+   LINKS AND BUTTONS
+   ========================================= */
+
+a {
+    transition: color 0.3s ease;
+}
+
+main a:not(nav a) {
+    color: #67e8f9;
+    font-weight: 600;
+}
+
+main a:not(nav a):hover {
+    color: #c4b5fd;
+}
+
+button {
+    background: var(--gradient);
+    color: white;
+
+    border: none;
+    border-radius: 9px;
+
+    padding: 13px 24px;
+    margin: 8px 8px 8px 0;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+}
+
+/* =========================================
+   FORMS
+   ========================================= */
+
+form {
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+    color: var(--text-main);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 13px 15px;
+    margin: 8px 0 18px;
+
+    background: #0b1326;
+    color: white;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    font: inherit;
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--primary);
+    margin: 8px 8px 8px 0;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #8492aa;
+}
+
+/* =========================================
+   LISTS
+   ========================================= */
+
+ul,
+ol {
+    padding-left: 25px;
+    color: var(--text-muted);
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   HORIZONTAL DIVIDER
+   ========================================= */
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 25px 0;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background: #050914;
+    color: var(--text-muted);
+
+    text-align: center;
+    padding: 28px 15px;
+
+    border-top: 1px solid var(--border);
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 38px 15px;
+    }
+
+    header h1 {
+        letter-spacing: 2px;
+    }
+
+    nav {
+        gap: 5px;
+        padding: 12px 8px;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    section {
+        padding: 20px;
+        border-radius: 13px;
+    }
+
+    section h2 {
+        font-size: 1.45rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    iframe {
+        height: 230px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 3px;
+}

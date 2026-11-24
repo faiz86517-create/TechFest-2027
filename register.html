@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechFest 2027 | Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <img src="images/techfest-logo.svg"
+         alt="TechFest 2027 Logo"
+         width="100%">
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="register.html">Registration</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <section>
+
+            <h2>Student Registration Form</h2>
+
+            <p>
+                Welcome to TechFest 2027!
+                Fill out the registration form below
+                to participate in our exciting festival events.
+            </p>
+
+        </section>
+
+        <!-- Registration Form -->
+        <section>
+
+            <h2>Enter Your Details</h2>
+
+            <form action="#" method="get">
+
+                <!-- Personal Information -->
+                <h3>Personal Information</h3>
+
+                <label for="fullname">Full Name:</label>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <br><br>
+
+                <label for="email">Email Address:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@gmail.com"
+                    required
+                >
+
+                <br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your 10-digit number"
+                    pattern="[0-9]{10}"
+                    required
+                >
+
+                <br><br>
+
+                <!-- Academic Information -->
+                <h3>Academic Information</h3>
+
+                <label for="department">Select Department:</label>
+
+                <select id="department" name="department" required>
+
+                    <option value="">-- Select Department --</option>
+                    <option value="CSE">Computer Science</option>
+                    <option value="AI-ML">Artificial Intelligence</option>
+                    <option value="ECE">Electronics and Communication</option>
+                    <option value="ME">Mechanical Engineering</option>
+                    <option value="BBA">Business Administration</option>
+                    <option value="Other">Other</option>
+
+                </select>
+
+                <br><br>
+
+                <label for="year">Year of Study:</label>
+
+                <select id="year" name="year" required>
+
+                    <option value="">-- Select Your Year --</option>
+                    <option value="First Year">First Year</option>
+                    <option value="Second Year">Second Year</option>
+                    <option value="Third Year">Third Year</option>
+                    <option value="Fourth Year">Fourth Year</option>
+
+                </select>
+
+                <br><br>
+
+                <!-- Registration Type -->
+                <h3>Registration Type</h3>
+
+                <p>Choose your registration type:</p>
+
+                <input
+                    type="radio"
+                    id="individual"
+                    name="registration"
+                    value="Individual"
+                    required
+                >
+
+                <label for="individual">Individual</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="team"
+                    name="registration"
+                    value="Team"
+                >
+
+                <label for="team">Team</label>
+
+                <br><br>
+
+                <!-- Event Preferences -->
+                <h3>Select Your Events</h3>
+
+                <p>You can select multiple events:</p>
+
+                <input
+                    type="checkbox"
+                    id="codesprint"
+                    name="events"
+                    value="CodeSprint"
+                >
+
+                <label for="codesprint">CodeSprint</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="roborally"
+                    name="events"
+                    value="RoboRally"
+                >
+
+                <label for="roborally">RoboRally</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="pixelcraft"
+                    name="events"
+                    value="PixelCraft"
+                >
+
+                <label for="pixelcraft">PixelCraft</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="band"
+                    name="events"
+                    value="Battle of Bands"
+                >
+
+                <label for="band">Battle of Bands</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="ideaforge"
+                    name="events"
+                    value="IdeaForge"
+                >
+
+                <label for="ideaforge">IdeaForge</label>
+
+                <br><br>
+
+                <!-- Additional Message -->
+                <h3>Additional Information</h3>
+
+                <label for="message">
+                    Why do you want to participate in TechFest?
+                </label>
+
+                <br><br>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    cols="40"
+                    placeholder="Write your message here..."
+                ></textarea>
+
+                <br><br>
+
+                <!-- Declaration -->
+                <input
+                    type="checkbox"
+                    id="declaration"
+                    name="declaration"
+                    value="accepted"
+                    required
+                >
+
+                <label for="declaration">
+                    I confirm that all the information provided is correct.
+                </label>
+
+                <br><br>
+
+                <!-- Form Buttons -->
+                <button type="submit">Submit Registration</button>
+
+                <button type="reset">Reset Form</button>
+
+            </form>
+
+        </section>
+
+        <!-- Registration Information -->
+        <section>
+
+            <h2>Important Information</h2>
+
+            <ul>
+                <li>Enter your correct personal details.</li>
+                <li>Use a valid email address.</li>
+                <li>Select the events in which you want to participate.</li>
+                <li>Carry your college identity card during the festival.</li>
+                <li>Contact the organising committee for any queries.</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+
+        <p>&copy; 2027 TechFest. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>
